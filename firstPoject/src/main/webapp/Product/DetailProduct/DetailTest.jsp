@@ -7,6 +7,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-	상품 상세
+	상품 상세123
 </body>
 </html>
