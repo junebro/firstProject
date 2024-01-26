@@ -7,6 +7,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-	상품tkdvnakdjflkjdslkg
+	상품
 </body>
 </html>
