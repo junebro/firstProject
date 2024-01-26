@@ -127,7 +127,7 @@
 
 	<div class="justify-content-center row" >
 		<div class="container col-7">
-			<table class="col-12" style="border: 1px solid; border-bottom: none;">
+			<table class="col-12">
 				<colgroup>
 					<col style="width: 20%;">
 					<col style="width: 80%">
@@ -176,7 +176,7 @@
 					</tr>
 				</tbody>
 			</table>
-			<table class="col-12" style="border: 1px solid; border-bottom: none;">
+			<table class="col-12">
 				<colgroup>
 					<col style="width: 20%;">
 					<col style="width: 80%">
@@ -225,7 +225,7 @@
 				</tbody>
 			</table>
 
-			<div style="border: 1px solid; padding: 25px; border-bottom: none;">
+			<div>
 				<form>
 					<select class="form-select" id="messageC"
 						style="width: 100%; margin: auto;">
@@ -244,7 +244,7 @@
 
 			<div>
 				<table class="col-12"
-					style="border: 1px solid; padding: 20px; border-bottom: none;">
+					style="padding: 20px; border-bottom: none;">
 					<tr>
 						<td>
 							<h4 style="margin: 20px;">주문 상품</h4>
@@ -276,7 +276,7 @@
 					</tr>
 				</table>
 			</div>
-			<table class="col-12" style="border: 1px solid;">
+			<table class="col-12">
 				<colgroup>
 					<col style="width: 20%;">
 					<col style="width: 80%">
@@ -317,10 +317,10 @@
 					</tr>
 				</tbody>
 			</table>
-			<table style="border: 1px solid; border-top: none;">
+			<table>
 				<tbody>
 					<tr style="height: 50px">
-						<td><span class="mar">결제 수단</span></td>
+						<td><span class="mar" style="font-size:24px;font-weight:bold;">결제 수단</span></td>
 					</tr>
 					<tr>
 						<td id="tabs" colspan="2">
