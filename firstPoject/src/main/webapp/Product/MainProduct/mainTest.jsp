@@ -7,6 +7,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-	상품 메인
+	상품 메인1
 </body>
 </html>
