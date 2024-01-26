@@ -48,7 +48,42 @@
     <p>Duis cursus. Maecenas ligula eros, blandit nec, pharetra at, semper at, magna. Nullam ac lacus. Nulla facilisi. Praesent viverra justo vitae neque. Praesent blandit adipiscing velit. Suspendisse potenti. Donec mattis, pede vel pharetra blandit, magna ligula faucibus eros, id euismod lacus dolor eget odio. Nam scelerisque. Donec non libero sed nulla mattis commodo. Ut sagittis. Donec nisi lectus, feugiat porttitor, tempor ac, tempor vitae, pede. Aenean vehicula velit eu tellus interdum rutrum. Maecenas commodo. Pellentesque nec elit. Fusce in lacus. Vivamus a libero vitae lectus hendrerit hendrerit.</p>
   </div>
 </div>
- 
+ <table class="col-12" style="border: 1px solid; border-bottom: none;">
+				<colgroup>
+					<col style="width: 20%;">
+					<col style="width: 80%">
+				</colgroup>
+				<tbody>
+					<tr style="height: 50px">
+						<td><span class="mar">할인 코드 적용 </span></td>
+						<td><input name="rname" class="form-control"
+							placeholder="할인코드" size="15" value="" type="text"
+							style="width: 100%; height: 50px;"></td>
+					</tr>
+					<tr style="height: 50px">
+						<td><span class="mar"> 적립금 </span></td>
+						<td><input name="rname" class="inputTypeText"
+							placeholder="적립금" size="15" value="" type="text"
+							style="width: 100%; height: 50px;"></td>
+					</tr>
+					<tr style="height: 50px">
+						<td colspan="2">
+							<nav
+								class="navbar navbar-expand-sm bg-light border justify-content-between">
+								<ul class="navbar-nav">
+									<li class="nav-item" style="margin-left: 10px;">적용 금액</li>
+
+								</ul>
+								<ul class="navbar-nav">
+
+									<li class="nav-item" style="margin-right: 20px;">적용된 금액 ?원
+									</li>
+								</ul>
+							</nav>
+						</td>
+					</tr>
+				</tbody>
+			</table>
  
 </body>
 </html>

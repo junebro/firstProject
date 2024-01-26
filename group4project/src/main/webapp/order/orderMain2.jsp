@@ -22,6 +22,11 @@
 	});
 </script>
 <style>
+.icon {
+	width: 30px;
+	height: 30px;
+}
+
 .mar {
 	margin-left: 15px;
 }
@@ -29,6 +34,11 @@
 .dark-nav {
 	color: white;
 	font-size: 30px;
+}
+
+.dark-nav1 {
+	color: white;
+	font-size: 20px;
 }
 
 .ui-tabs-vertical {
@@ -73,15 +83,24 @@
 		<div class="col-1">
 			<nav class="navbar navbar-expand-sm">
 				<ul class="navbar-nav">
-					<li class="nav-item"><a class="nav-link" href="#">Link 1</a></li>
+					<li class="nav-item"><a class="nav-link" href="#"><img
+							class="icon"
+							src="https://cdn-icons-png.freepik.com/256/10009/10009107.png?ga=GA1.1.1582875918.1706248960&semt=ais">
+					</a></li>
 				</ul>
 			</nav>
 		</div>
 		<div class="col-6">
 			<nav class="navbar navbar-expand-sm">
 				<ul class="navbar-nav ms-auto">
-					<li class="nav-item"><a class="nav-link" href="#">Link 1</a></li>
-					<li class="nav-item"><a class="nav-link" href="#">Link 2</a></li>
+					<li class="nav-item"><a class="nav-link" href="#"> <img
+							class="icon"
+							src="https://cdn-icons-png.freepik.com/256/12718/12718662.png">
+					</a></li>
+					<li class="nav-item"><a class="nav-link" href="#"> <img
+							class="icon"
+							src="https://cdn-icons-png.freepik.com/256/747/747376.png?ga=GA1.1.1582875918.1706248960&semt=ais">
+					</a></li>
 				</ul>
 			</nav>
 		</div>
@@ -90,7 +109,7 @@
 		<div class="col-7">
 			<nav class="navbar navbar-expand-sm bg-dark text-center">
 				<ul class="navbar-nav mx-auto">
-					<li class="nav-item"><a class="nav-link dark-nav" href="#">주문/결제</a></li>
+					<li class="nav-item"><a class="nav-link dark-nav">주문/결제</a></li>
 				</ul>
 			</nav>
 		</div>
@@ -193,42 +212,6 @@
 					</tr>
 				</table>
 			</div>
-			<table class="col-12" style="border: 1px solid; border-bottom: none;">
-				<colgroup>
-					<col style="width: 20%;">
-					<col style="width: 80%">
-				</colgroup>
-				<tbody>
-					<tr style="height: 50px">
-						<td><span class="mar">할인 코드 적용 </span></td>
-						<td><input name="rname" class="form-control"
-							placeholder="할인코드" size="15" value="" type="text"
-							style="width: 100%; height: 50px;"></td>
-					</tr>
-					<tr style="height: 50px">
-						<td><span class="mar"> 적립금 </span></td>
-						<td><input name="rname" class="inputTypeText"
-							placeholder="적립금" size="15" value="" type="text"
-							style="width: 100%; height: 50px;"></td>
-					</tr>
-					<tr style="height: 50px">
-						<td colspan="2">
-							<nav
-								class="navbar navbar-expand-sm bg-light border justify-content-between">
-								<ul class="navbar-nav">
-									<li class="nav-item" style="margin-left: 10px;">적용 금액</li>
-
-								</ul>
-								<ul class="navbar-nav">
-
-									<li class="nav-item" style="margin-right: 20px;">적용된 금액 ?원
-									</li>
-								</ul>
-							</nav>
-						</td>
-					</tr>
-				</tbody>
-			</table>
 			<table class="col-12" style="border: 1px solid;">
 				<colgroup>
 					<col style="width: 20%;">
@@ -238,19 +221,19 @@
 					<tr style="height: 50px">
 						<td><span class="mar">주문 상품</span></td>
 						<td><input name="rname" class="form-control"
-							placeholder="할인코드" size="15" value="" type="text"
+							placeholder="주문 상품 코드를 받아와서 입력될 예정" size="15" value="" type="text"
 							style="width: 100%; height: 50px;"></td>
 					</tr>
 					<tr style="height: 50px">
 						<td><span class="mar">배송비</span></td>
 						<td><input name="rname" class="inputTypeText"
-							placeholder="적립금" size="15" value="" type="text"
+							placeholder="배송비 정보를 받아와서 입력될 예정" size="15" value="" type="text"
 							style="width: 100%; height: 50px;"></td>
 					</tr>
 					<tr style="height: 50px">
 						<td><span class="mar">할인/부가결제</span></td>
 						<td><input name="rname" class="inputTypeText"
-							placeholder="적립금" size="15" value="" type="text"
+							placeholder="회원 정보에 따른 할인량을 계산하여 입력될 예정" size="15" value="" type="text"
 							style="width: 100%; height: 50px;"></td>
 					</tr>
 					<tr style="height: 50px">
@@ -270,81 +253,76 @@
 					</tr>
 				</tbody>
 			</table>
-			<table class="col-12" style="border: 1px solid; border-top: none;">
+			<table style="border: 1px solid; border-top: none;">
 				<tbody>
 					<tr style="height: 50px">
-						<td><span class="mar"><h4>결제 수단</h4></span></td>
-					</tr>
-					<tr style="height: 50px">
-						<td><span class="mar">결제 수단 선택</span></td>
+						<td><span class="mar">결제 수단</span></td>
 					</tr>
 					<tr>
-						<td>
-							<div id="tabs">
-								<div>
-									<ul style="width: 100%;">
-										<li><a href="#tabs-1">무통장 입금</a></li>
-										<li><a href="#tabs-2">카카오 페이</a></li>
-										<li><a href="#tabs-3">신용 카드</a></li>
-									</ul>
-								</div>
+						<td id="tabs" colspan="2">
+							<ul style="width: 100%;">
+								<li><a href="#tabs-1">무통장 입금</a></li>
+								<li><a href="#tabs-2">카카오 페이</a></li>
+								<li><a href="#tabs-3">신용 카드</a></li>
+							</ul>
+							<div id="tabs-1" style="width: 100%;">
+								<h2>무통장입금</h2>
+								<table class="col-12" style="">
+									<colgroup>
+										<col style="width: 20%;">
+										<col style="width: 80%">
+									</colgroup>
+									<tbody>
+										<tr style="height: 50px">
+											<td><span class="mar">입금은행 </span></td>
+											<td><form>
+													<select class="form-select" id="messageC"
+														style="width: 100%; margin: auto;">
+														<option>--입금 은행을 선택해주세요--</option>
+														<option>쓰레기은행 20240126</option>
+														<option>바보은행 32432432423432</option>
+														<option>뜨아악은행 67212212</option>
+													</select>
+												</form></td>
+										</tr>
+										<tr style="height: 50px">
+											<td><span class="mar">입금자명 </span></td>
+											<td><input name="rname" class="form-control"
+												placeholder="입금자 이름" size="15" value="" type="text"
+												style="width: 100%; height: 50px;"></td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							<div id="tabs-2" style="width: 100%;">
+								<h3>카카오 페이 결제</h3>
+								<p>-카카오톡 앱을 설치한 후, 최초 1회 카드 정보를 등록하셔야 사용 가능합니다.</p>
+								<p>-인터넷 익스플로러는 지원하지 않습니다.</p>
+								<p>-카카오머니로 결제 시, 현금영수증 방급은 (주)카카오페이에서 발급가능합니다..</p>
+							</div>
+							<div id="tabs-3" style="width: 100%;">
+								<h3>신용 카드 결제</h3>
+								<p>-소액 결제의 경우 PG사 정책에 따라 결제 금액 제한이 있을 수 있습니다.</p>
+								<p>-결제 버튼을 누르시면 팝업 창이 생성됩니다.</p>
 							</div>
 						</td>
 					</tr>
 					<tr>
-						<td>
-							<div class="col-7" id="tabs-1">
-								<h2>Content heading 1</h2>
-								<p>Proin elit arcu, rutrum commodo, vehicula tempus, commodo
-									a, risus. Curabitur nec arcu. Donec sollicitudin mi sit amet
-									mauris. Nam elementum quam ullamcorper ante. Etiam aliquet
-									massa et lorem. Mauris dapibus lacus auctor risus. Aenean
-									tempor ullamcorper leo. Vivamus sed magna quis ligula eleifend
-									adipiscing. Duis orci. Aliquam sodales tortor vitae ipsum.
-									Aliquam nulla. Duis aliquam molestie erat. Ut et mauris vel
-									pede varius sollicitudin. Sed ut dolor nec orci tincidunt
-									interdum. Phasellus ipsum. Nunc tristique tempus lectus.</p>
-							</div>
-							<div class="col-7" id="tabs-2">
-								<h2>Content heading 2</h2>
-								<p>Morbi tincidunt, dui sit amet facilisis feugiat, odio
-									metus gravida ante, ut pharetra massa metus id nunc. Duis
-									scelerisque molestie turpis. Sed fringilla, massa eget luctus
-									malesuada, metus eros molestie lectus, ut tempus eros massa ut
-									dolor. Aenean aliquet fringilla sem. Suspendisse sed ligula in
-									ligula suscipit aliquam. Praesent in eros vestibulum mi
-									adipiscing adipiscing. Morbi facilisis. Curabitur ornare
-									consequat nunc. Aenean vel metus. Ut posuere viverra nulla.
-									Aliquam erat volutpat. Pellentesque convallis. Maecenas
-									feugiat, tellus pellentesque pretium posuere, felis lorem
-									euismod felis, eu ornare leo nisi vel felis. Mauris consectetur
-									tortor et purus.</p>
-							</div>
-							<div class="col-7" id="tabs-3">
-								<h2>Content heading 3</h2>
-								<p>Mauris eleifend est et turpis. Duis id erat. Suspendisse
-									potenti. Aliquam vulputate, pede vel vehicula accumsan, mi
-									neque rutrum erat, eu congue orci lorem eget lorem. Vestibulum
-									non ante. Class aptent taciti sociosqu ad litora torquent per
-									conubia nostra, per inceptos himenaeos. Fusce sodales. Quisque
-									eu urna vel enim commodo pellentesque. Praesent eu risus
-									hendrerit ligula tempus pretium. Curabitur lorem enim, pretium
-									nec, feugiat nec, luctus a, lacus.</p>
-								<p>Duis cursus. Maecenas ligula eros, blandit nec, pharetra
-									at, semper at, magna. Nullam ac lacus. Nulla facilisi. Praesent
-									viverra justo vitae neque. Praesent blandit adipiscing velit.
-									Suspendisse potenti. Donec mattis, pede vel pharetra blandit,
-									magna ligula faucibus eros, id euismod lacus dolor eget odio.
-									Nam scelerisque. Donec non libero sed nulla mattis commodo. Ut
-									sagittis. Donec nisi lectus, feugiat porttitor, tempor ac,
-									tempor vitae, pede. Aenean vehicula velit eu tellus interdum
-									rutrum. Maecenas commodo. Pellentesque nec elit. Fusce in
-									lacus. Vivamus a libero vitae lectus hendrerit hendrerit.</p>
-							</div>
-						</td>
+						<td></td>
 					</tr>
 				</tbody>
 			</table>
+			<div class="justify-content-center row">
+				<div class="col-12">
+					<nav class="navbar navbar-expand-sm bg-dark text-center">
+						<ul class="navbar-nav mx-auto">
+							<li class="nav-item"><a class="nav-link dark-nav1" href="#">?원
+									결제하기</a></li>
+						</ul>
+					</nav>
+				</div>
+
+			</div>
 		</div>
 	</div>
 
