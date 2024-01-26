@@ -24,9 +24,7 @@
 <style>
 
 .info {
-	background-color: #9999FF;
-	opacity: 0.5;
-	font-weight: bold;
+	background-color: #F0E2F0;
 }
 
 .icon {
