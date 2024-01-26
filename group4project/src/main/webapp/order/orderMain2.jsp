@@ -22,6 +22,13 @@
 	});
 </script>
 <style>
+
+.info {
+	background-color: #9999FF;
+	opacity: 0.5;
+	font-weight: bold;
+}
+
 .icon {
 	width: 30px;
 	height: 30px;
@@ -79,7 +86,7 @@
 </head>
 <body>
 
-	<div class="justify-content-center row">
+	<div style="background-color: white;" class="justify-content-center row">
 		<div class="col-1">
 			<nav class="navbar navbar-expand-sm">
 				<ul class="navbar-nav">
@@ -116,7 +123,7 @@
 
 	</div>
 
-	<div class="justify-content-center row">
+	<div class="justify-content-center row" >
 		<div class="container col-7">
 			<table class="col-12" style="border: 1px solid; border-bottom: none;">
 				<colgroup>
@@ -124,39 +131,94 @@
 					<col style="width: 80%">
 				</colgroup>
 				<tbody>
-					<tr style="height: 50px">
-						<td><span class="mar">받는사람 </span></td>
-						<td><input name="rname" class="form-control"
-							placeholder="받는분 성함" size="15" value="" type="text"
-							style="width: 100%; height: 50px;"></td>
+					<tr>
+						<td>
+							<h3 style="margin: 20px;">회원정보</h3>
+						</td>
 					</tr>
 					<tr style="height: 50px">
-						<td><span class="mar">주소 </span></td>
-						<td><input name="rname" class="inputTypeText"
-							placeholder="우편 번호" size="15" value="" type="text"
-							style="width: 100%; height: 50px;"></td>
+						<td><span class="mar">주문자 </span></td>
+						<td><input placeholder="회원 정보를 통해 입력" size="15" value=""
+							type="text" style="width: 100%;"></td>
 					</tr>
-					<tr style="height: 50px">
-						<td><span></span></td>
-						<td><input name="rname" class="inputTypeText"
-							placeholder="기본 주소" size="15" value="" type="text"
-							style="width: 100%; height: 50px;"></td>
-					</tr>
-					<tr style="height: 50px">
-						<td><span></span></td>
-						<td><input name="rname" class="inputTypeText"
-							placeholder="나머지 주소(선택 입력 가능)" size="15" value="" type="text"
-							style="width: 100%; height: 50px;"></td>
-					</tr>
-					<tr style="height: 50px">
-						<td><span class="mar">일반 전화</span></td>
-						<td><input name="rname" class="inputTypeText" placeholder=""
-							size="15" value="" type="text" style="width: 100%; height: 50px;"></td>
+					<tr>
+						<td><span class="mar">이메일</span></td>
+						<td>
+							<div class="input-group mt-3 mb-3 input-group-prepend">
+								<input style="width: 70%" type="text" class="form-control"
+									placeholder="회원 정보를 통해 입력"> <select
+									class="form-select select-toggle" id="messageC"
+									style="width: 30%; margin: auto;">
+									<option>--메일 선택--</option>
+									<option>@naver.com</option>
+									<option>@gmail.com</option>
+									<option>@daum.net</option>
+								</select>
+							</div>
+						</td>
 					</tr>
 					<tr style="height: 50px">
 						<td><span class="mar">휴대 전화</span></td>
-						<td><input name="rname" class="inputTypeText" placeholder=""
-							size="15" value="" type="text" style="width: 100%; height: 50px;"></td>
+						<td>
+							<div class="input-group mt-3 mb-3 input-group-prepend">
+								<select class="form-select select-toggle" id="messageC"
+									style="width: 30%; margin: auto;">
+									<option>--번호 선택--</option>
+									<option>010</option>
+									<option>011</option>
+									<option>070</option>
+								</select> <input style="width: 70%" type="text" class="form-control"
+									placeholder="회원 정보를 통해 입력">
+							</div>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<table class="col-12" style="border: 1px solid; border-bottom: none;">
+				<colgroup>
+					<col style="width: 20%;">
+					<col style="width: 80%">
+				</colgroup>
+				<tbody>
+					<tr style="margin: 20px;">
+						<td>
+							<h3 style="margin: 20px;">배송정보</h3>
+						</td>
+					</tr>
+					<tr style="height: 50px">
+						<td><span class="mar">받는사람 </span></td>
+						<td><input placeholder="받는분 성함" size="15" value=""
+							type="text" style="width: 100%; height: 50px;"></td>
+					</tr>
+					<tr style="height: 50px">
+						<td><span class="mar">주소 </span></td>
+						<td><input placeholder="우편 번호" size="15" value="" type="text"
+							style="width: 100%; height: 50px;"></td>
+					</tr>
+					<tr style="height: 50px">
+						<td><span></span></td>
+						<td><input placeholder="기본 주소" size="15" value="" type="text"
+							style="width: 100%; height: 50px;"></td>
+					</tr>
+					<tr style="height: 50px">
+						<td><span></span></td>
+						<td><input placeholder="나머지 주소(선택 입력 가능)" size="15" value=""
+							type="text" style="width: 100%; height: 50px;"></td>
+					</tr>
+					<tr style="height: 50px">
+						<td><span class="mar">휴대 전화</span></td>
+						<td>
+							<div class="input-group mt-3 mb-3 input-group-prepend">
+								<select class="form-select select-toggle" id="messageC"
+									style="width: 30%; margin: auto;">
+									<option>--번호 선택--</option>
+									<option>010</option>
+									<option>011</option>
+									<option>070</option>
+								</select> <input style="width: 70%" type="text" class="form-control"
+									placeholder="-없이 번호를 입력해주세요.">
+							</div>
+						</td>
 					</tr>
 				</tbody>
 			</table>
@@ -183,7 +245,7 @@
 					style="border: 1px solid; padding: 20px; border-bottom: none;">
 					<tr>
 						<td>
-							<h4 style="margin-left: 10px; margin-top: 5px;">주문 상품</h4>
+							<h4 style="margin: 20px;">주문 상품</h4>
 						</td>
 					</tr>
 					<tr>
@@ -221,8 +283,8 @@
 					<tr style="height: 50px">
 						<td><span class="mar">주문 상품</span></td>
 						<td><input name="rname" class="form-control"
-							placeholder="주문 상품 코드를 받아와서 입력될 예정" size="15" value="" type="text"
-							style="width: 100%; height: 50px;"></td>
+							placeholder="주문 상품 코드를 받아와서 입력될 예정" size="15" value=""
+							type="text" style="width: 100%; height: 50px;"></td>
 					</tr>
 					<tr style="height: 50px">
 						<td><span class="mar">배송비</span></td>
@@ -233,8 +295,8 @@
 					<tr style="height: 50px">
 						<td><span class="mar">할인/부가결제</span></td>
 						<td><input name="rname" class="inputTypeText"
-							placeholder="회원 정보에 따른 할인량을 계산하여 입력될 예정" size="15" value="" type="text"
-							style="width: 100%; height: 50px;"></td>
+							placeholder="회원 정보에 따른 할인량을 계산하여 입력될 예정" size="15" value=""
+							type="text" style="width: 100%; height: 50px;"></td>
 					</tr>
 					<tr style="height: 50px">
 						<td colspan="2">
@@ -323,8 +385,19 @@
 				</div>
 
 			</div>
+			<div class="info">
+				<br>
+				<p>- 무이자할부가 적용되지 않은 상품과 무이자할부가 가능한 상품을 동시에 구매할 경우 전체 주문 상품 금액에
+					대해 무이자할부가 적용되지 않습니다. 무이자할부를 원하시는 경우 장바구니에서 무이자할부 상품만 선택하여 주문하여 주시기
+					바랍니다.</p>
+				<br>
+				<p>- 최소 결제 가능 금액은 결제금액에서 배송비를 제외한 금액입니다.</p>
+				<br>
+			</div>
+
 		</div>
 	</div>
+
 
 
 </body>
