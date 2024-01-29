@@ -115,7 +115,7 @@ a {
 									src="https://cdn-icons-png.flaticon.com/128/4789/4789956.png">
 							</div>
 							<div style="width: 70%; float: left;">
-								100원<br>총적립금
+								100원<br>총 적립금
 							</div>
 						</td>
 						<td class="Myp" style="border-right: 0.5px gray inset">
@@ -132,7 +132,7 @@ a {
 									src="https://cdn-icons-png.flaticon.com/128/65/65998.png">
 							</div>
 							<div style="width: 70%; float: left;">
-								0회<br> 총주문
+								0회<br> 총 주문
 							</div></td>
 					</tr>
 				</tbody>
@@ -188,6 +188,9 @@ a {
 				<p class="maino">나의 주문내역 조회</p>
 				<hr class="disborder">
 				<br>
+				<div style="text-align: center;">
+				주문 내역이 없습니다.
+				</div>
 			</div>
 		</div>
 		<div class="col-sm-1"></div>
