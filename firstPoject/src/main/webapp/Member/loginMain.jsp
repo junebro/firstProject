@@ -9,15 +9,31 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-<!-- 기본 폰트 -->
+<!-- 폰트 -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+
+<!-- 상단 -->
+<!--  font-family: 'Kanit', sans-serif;  -->
+<link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300&display=swap" rel="stylesheet">
+	
+<!--  헤더 / 탭 메뉴 / 배너,썸네일 등 소개 문구 / 상품소개 타이틀 문구 -->
+<!-- font-family: 'Noto Sans KR', sans-serif; -->
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500&display=swap" rel="stylesheet">
 
-<!-- 추가 폰트 -->
-<link
-	href="https://fonts.googleapis.com/css2?family=Hahmlet:wght@200&display=swap"
-	rel="stylesheet">
+<!-- 상품 상세 페이지 -->
+<!-- font-family: 'Noto Sans KR', sans-serif; -->
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500&display=swap" rel="stylesheet">
+
+<!-- 이용약관, 개인정보처리방침, 개인정보 수집 이용동의 박스 -->
+<!-- font-family: 'Gothic A1', sans-serif; -->
+<link href="https://fonts.googleapis.com/css2?family=Gothic+A1:wght@200&display=swap" rel="stylesheet">
+
+<!-- 버튼 -->
+<!-- font-family: 'Black Han Sans', sans-serif; -->
+<link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap" rel="stylesheet">
+
 
 <title>Insert title here</title>
 <style type="text/css">
@@ -42,7 +58,7 @@ body {
 }
 
 .login-wrapper>h2 {
-	font-family: 'Hahmlet', serif;
+	font-family: 'Kanit', sans-serif;
 	font-size: 50px;
 	font-weight: bolder;
 	color: #000000;
