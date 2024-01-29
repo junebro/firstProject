@@ -6,12 +6,18 @@
 <head>
 <meta charset="UTF-8">
 <title>주문 정보</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link
+	href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;500&display=swap"
+	rel="stylesheet">
 <link
 	href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
 	rel="stylesheet">
 <script
 	src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-<link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+<link rel="stylesheet"
+	href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
 <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
 <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
 <script>
@@ -24,8 +30,16 @@
 	});
 </script>
 <style>
+body {
+	font-family: 'Noto Sans KR', sans-serif;
+}
 
-.distinct{
+tr, input, select {
+	height: 50px;
+	width: 100%;
+}
+
+.distinct {
 	height: 10px;
 	border: 3px inset black;
 	background-color: gray;
@@ -94,7 +108,8 @@
 </head>
 <body>
 
-	<div style="background-color: white;" class="justify-content-center row">
+	<div style="background-color: white;"
+		class="justify-content-center row">
 		<div class="col-1">
 			<nav class="navbar navbar-expand-sm">
 				<ul class="navbar-nav">
@@ -131,7 +146,7 @@
 
 	</div>
 
-	<div class="justify-content-center row" >
+	<div class="justify-content-center row">
 		<div class="container col-7">
 			<table class="col-12">
 				<colgroup>
@@ -197,22 +212,21 @@
 					<tr style="height: 50px">
 						<td><span class="mar">받는사람 </span></td>
 						<td><input placeholder="받는분 성함" size="15" value=""
-							type="text" style="width: 100%; height: 50px;"></td>
+							type="text""></td>
 					</tr>
 					<tr style="height: 50px">
 						<td><span class="mar">주소 </span></td>
-						<td><input placeholder="우편 번호" size="15" value="" type="text"
-							style="width: 100%; height: 50px;"></td>
+						<td><input placeholder="우편 번호" size="15" type="text"></td>
 					</tr>
 					<tr style="height: 50px">
 						<td><span></span></td>
-						<td><input placeholder="기본 주소" size="15" value="" type="text"
-							style="width: 100%; height: 50px;"></td>
+						<td><input placeholder="기본 주소" size="15" type="text"
+							style="width: 100%;"></td>
 					</tr>
 					<tr style="height: 50px">
 						<td><span></span></td>
-						<td><input placeholder="나머지 주소(선택 입력 가능)" size="15" value=""
-							type="text" style="width: 100%; height: 50px;"></td>
+						<td><input placeholder="나머지 주소(선택 입력 가능)" size="15"
+							type="text""></td>
 					</tr>
 					<tr style="height: 50px">
 						<td><span class="mar">휴대 전화</span></td>
@@ -250,8 +264,7 @@
 			</div>
 			<hr class="distinct">
 			<div>
-				<table class="col-12"
-					style="padding: 20px; border-bottom: none;">
+				<table class="col-12" style="padding: 20px; border-bottom: none;">
 					<tr>
 						<td>
 							<h4 style="margin: 20px;">주문 상품</h4>
@@ -328,7 +341,8 @@
 			<table>
 				<tbody>
 					<tr style="height: 50px">
-						<td><span class="mar" style="font-size:24px;font-weight:bold;">결제 수단</span></td>
+						<td><span class="mar"
+							style="font-size: 24px; font-weight: bold;">결제 수단</span></td>
 					</tr>
 					<tr>
 						<td id="tabs" colspan="2">
