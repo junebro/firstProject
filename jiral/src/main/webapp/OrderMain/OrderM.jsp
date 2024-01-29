@@ -26,8 +26,8 @@
 <style>
 
 .distinct{
-	height: 20px;
-	border: 1px inset;
+	height: 10px;
+	border: 3px inset black;
 	background-color: gray;
 }
 
