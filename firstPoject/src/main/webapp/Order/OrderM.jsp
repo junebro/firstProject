@@ -20,6 +20,8 @@
 	href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
 <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
 <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+<script
+	src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
 <script>
 	$(document).ready(function() {
 		$("input").addClass("form-control");
@@ -28,6 +30,15 @@
 		$("#tabs").tabs().addClass("ui-tabs-vertical ui-helper-clearfix");
 		$("#tabs li").removeClass("ui-corner-top").addClass("ui-corner-left");
 	});
+
+	function execDaumPostcode() {
+		new daum.Postcode({
+			oncomplete : function(data) {
+				document.getElementById('zip-code').value = data.zonecode;
+				document.getElementById('address-1').value = data.address;
+			}
+		}).open();
+	}
 </script>
 <style>
 body {
@@ -102,6 +113,22 @@ tr, input, select {
 	padding: 1em;
 	float: right;
 	width: 40em;
+}
+
+button {
+	font-family: 'Noto Sans KR', sans-serif;
+	font-size: 1em;
+	cursor: pointer;
+	border-width: thin;
+}
+
+.btn_black {
+	padding: 5px 10px;
+	background-color: #000000;
+	color: #ffffff;
+}
+.paymentbar{
+	text-align: center;
 }
 </style>
 
@@ -215,17 +242,19 @@ tr, input, select {
 							type="text""></td>
 					</tr>
 					<tr style="height: 50px">
-						<td><span class="mar">주소 </span></td>
-						<td><input placeholder="우편 번호" size="15" type="text"></td>
+						<td><span class="mar">주소</span></td>
+						<td><input type="button" onclick="execDaumPostcode()"
+							value="우편번호 찾기"> <input type="text" id="zip-code"
+							placeholder="우편번호" disabled="disabled"></td>
 					</tr>
 					<tr style="height: 50px">
 						<td><span></span></td>
-						<td><input placeholder="기본 주소" size="15" type="text"
-							style="width: 100%;"></td>
+						<td><input id="address-1" placeholder="도로명주소" size="15"
+							type="text" style="width: 100%;" disabled="disabled"></td>
 					</tr>
 					<tr style="height: 50px">
 						<td><span></span></td>
-						<td><input placeholder="나머지 주소(선택 입력 가능)" size="15"
+						<td><input id="address-2" placeholder="상세주소" size="15"
 							type="text""></td>
 					</tr>
 					<tr style="height: 50px">
@@ -347,9 +376,9 @@ tr, input, select {
 					<tr>
 						<td id="tabs" colspan="2">
 							<ul style="width: 100%;">
-								<li><a href="#tabs-1">무통장 입금</a></li>
-								<li><a href="#tabs-2">카카오 페이</a></li>
-								<li><a href="#tabs-3">신용 카드</a></li>
+								<li class="paymentbar"><a href="#tabs-1">무통장 입금</a></li>
+								<li class="paymentbar"><a href="#tabs-2">카카오 페이</a></li>
+								<li class="paymentbar"><a href="#tabs-3">신용 카드</a></li>
 							</ul>
 							<div id="tabs-1" style="width: 100%;">
 								<h2>무통장입금</h2>
