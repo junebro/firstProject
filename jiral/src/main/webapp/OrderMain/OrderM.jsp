@@ -25,6 +25,12 @@
 </script>
 <style>
 
+.distinct{
+	height: 20px;
+	border: 1px inset;
+	background-color: gray;
+}
+
 .info {
 	background-color: #9999FF;
 	opacity: 0.5;
@@ -176,6 +182,7 @@
 					</tr>
 				</tbody>
 			</table>
+			<hr class="distinct">
 			<table class="col-12">
 				<colgroup>
 					<col style="width: 20%;">
@@ -241,7 +248,7 @@
 					</div>
 				</form>
 			</div>
-
+			<hr class="distinct">
 			<div>
 				<table class="col-12"
 					style="padding: 20px; border-bottom: none;">
@@ -317,6 +324,7 @@
 					</tr>
 				</tbody>
 			</table>
+			<hr class="distinct">
 			<table>
 				<tbody>
 					<tr style="height: 50px">
