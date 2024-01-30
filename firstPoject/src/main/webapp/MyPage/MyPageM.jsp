@@ -69,10 +69,11 @@ h1 {
 	width: 15%;
 	height: 15px;
 	text-align: center;
+	font-size: 14px;
 }
 
 .orderTd { /* 주문내역 테이블 스타일 */
-	width: 15%;
+	width: 12%;
 	height: 150px;
 	text-align: center;
 }
@@ -210,67 +211,28 @@ a {
 				<br> <a href="#">회원정보수정</a><br> <a href="#">로그아웃</a><br>
 			</div>
 			<div class="col-sm-8" id="mainDiv">
-				<p class="maino">나의 주문내역</p>
+				<p class="maino">나의 구매내역</p>
 				<br>
 				<table style="width: 100%">
 					<tbody>
 						<tr class="underline">
-							<th class="orderTh">사진</th>
-							<th class="orderTh" style="width: 40%;">상품</th>
+							<th class="orderTh">주문번호</th>
+							<th class="orderTh">상품</th>
+							<th class="orderTh" style="width: 40%;">상품 상세</th>
 							<th class="orderTh">옵션</th>
 							<th class="orderTh">수량</th>
 							<th class="orderTh">가격</th>
 						</tr>
 						<tr class="underline">
+							<td class="orderTd">191919A</td>
 							<td class="orderTd"><img class="orderImg "
 								src="https://www.wadiz.kr/ft/images/green001/2023/0613/20230613092632647_6.gif"></td>
-							<td class="orderTd" style="width: 40%;">상품의 내용을 가져와서 작성</td>
+							<td class="orderTd" style="width: 40%;">진흙 뭍히고 물로 닦는 신발<br>쓰레기 신발<br>음</td>
 							<td class="orderTd">280</td>
 							<td class="orderTd">2</td>
 							<td class="orderTd">100원<br></td>
 						</tr>
-						<tr class="underline">
-							<td class="orderTd">사진</td>
-							<td class="orderTd" style="width: 40%;">상품</td>
-							<td class="orderTd">옵션</td>
-							<td class="orderTd">수량</td>
-							<td class="orderTd">가격</td>
-						</tr>
-						<tr class="underline">
-							<td class="orderTd">사진</td>
-							<td class="orderTd" style="width: 40%;">상품</td>
-							<td class="orderTd">옵션</td>
-							<td class="orderTd">수량</td>
-							<td class="orderTd">가격</td>
-						</tr>
-						<tr class="underline">
-							<td class="orderTd">사진</td>
-							<td class="orderTd" style="width: 40%;">상품</td>
-							<td class="orderTd">옵션</td>
-							<td class="orderTd">수량</td>
-							<td class="orderTd">가격</td>
-						</tr>
-						<tr class="underline">
-							<td class="orderTd">사진</td>
-							<td class="orderTd" style="width: 40%;">상품</td>
-							<td class="orderTd">옵션</td>
-							<td class="orderTd">수량</td>
-							<td class="orderTd">가격</td>
-						</tr>
-						<tr class="underline">
-							<td class="orderTd">사진</td>
-							<td class="orderTd" style="width: 40%;">상품</td>
-							<td class="orderTd">옵션</td>
-							<td class="orderTd">수량</td>
-							<td class="orderTd">가격</td>
-						</tr>
-						<tr class="underline">
-							<td class="orderTd">사진</td>
-							<td class="orderTd" style="width: 40%;">상품</td>
-							<td class="orderTd">옵션</td>
-							<td class="orderTd">수량</td>
-							<td class="orderTd">가격</td>
-						</tr>
+						
 					</tbody>
 				</table>
 			</div>
