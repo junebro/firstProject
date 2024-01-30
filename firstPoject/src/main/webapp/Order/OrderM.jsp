@@ -50,9 +50,9 @@ tr, input, select {
 	width: 100%;
 }
 
-.distinct {
-	height:2px;
-	border: 1px groove #BDBDBD;
+.distinct {	/* 구분선 스타일 */
+	 border-bottom: 1px solid rgba(128, 128, 128, 0.5);
+        margin-top: 10px;
 }
 
 .info {
@@ -140,7 +140,7 @@ button {
 		<div class="col-1">
 			<nav class="navbar navbar-expand-sm">
 				<ul class="navbar-nav">
-					<li class="nav-item"><a class="nav-link" href="#"><img
+					<li class="nav-item"><a class="nav-link" href="./../Member/MyCart.jsp"><img
 							class="icon"
 							src="https://cdn-icons-png.freepik.com/256/10009/10009107.png?ga=GA1.1.1582875918.1706248960&semt=ais">
 					</a></li>
@@ -154,7 +154,7 @@ button {
 							class="icon"
 							src="https://cdn-icons-png.freepik.com/256/12718/12718662.png">
 					</a></li>
-					<li class="nav-item"><a class="nav-link" href="#"> <img
+					<li class="nav-item"><a class="nav-link" href="./../MyPage/MyPageM.jsp"> <img
 							class="icon"
 							src="https://cdn-icons-png.freepik.com/256/747/747376.png?ga=GA1.1.1582875918.1706248960&semt=ais">
 					</a></li>
