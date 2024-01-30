@@ -54,7 +54,8 @@ body {
 	height: 350px;
 	padding: 40px;
 	box-sizing: border-box;
-	margin: 0 auto;
+	margin:0 auto;
+	margin-top: 100px;
 }
 
 .login-wrapper>h2 {
@@ -251,10 +252,8 @@ li {
 				for="remember-check"> <input type="checkbox"
 				id="remember-check">아이디 저장하기 <a
 				href="/customer/direct.FindID.action" class="alink">아이디/비밀번호 찾기</a>
-			</label> <input type="submit" value="로그인" class="login-default"> <input
-				type="submit" value="카카오 로그인" class="login-kakao"> <input
-				type="submit" value="네이버 로그인" class="login-naver"> <input
-				type="submit" value="Apple 로그인" class="login-apple">
+			</label>
+			<input type="submit" value="로그인" class="login-default">
 			<div class="nonMembers_txt">
 				<a href="/noncustomer/findNonCustomerOrder.action" class="blink">비회원
 					주문조회</a>

@@ -1,12 +1,12 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@ include file="./../common/common.jsp"%>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
 <!-- 폰트 -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -32,6 +32,9 @@
 <!-- font-family: 'Black Han Sans', sans-serif; -->
 <link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap" rel="stylesheet">
 <title>Insert title here</title>
+
+<link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+
 <style>
 * {
 	padding: 0;
@@ -44,92 +47,93 @@ body {
 	font-family: 'Noto Sans KR', sans-serif;
 	text-align: center;
 }
-.contents h2{
+.contents h2{ /* 회원가입 */
 	font-size: 40px;
 	margin-bottom: 30px;
 	margin-top: 100px;
 }
-.section li{
+.section li{ /* 페이지 진행과정 */
 	font-size: 15px;
 	color: #BDBDBD;
 	display : inline;
 	padding: 5px;
 }
-.section .selected{
+.section .selected{ /* 현재 페이지 */
 	color: black;
 }
-.titleArea{
+.titleArea{ /* 기본정보, 추가정보 */
 	margin: auto;
 }
-.titleArea h3{
+.titleArea h3{ /* 기본정보 */
 	text-align : left;
 	margin-top: 30px;
 }
-.titleArea li{
+.titleArea li{ /* 필수입력사항 */
 	text-align : right;
-	list-style: square;
 	color: #A6A6A6;
 }
-.required{
-	list-style: square;
+.required::marker { /* 리스트 마커 색상 설정 */
+    color: red; 
 }
 table{
 	width : 800px;
 	margin-left:auto;
 	margin-right:auto;
-	border-top: 2px solid black;
+	border-left: none;
+	border-right: none;
+	border-top: 1px solid rgba(128, 128, 128, 0.5);
 }
-tr{
-	border: 1px groove #BDBDBD;
+tr{ /* 행 */
+    border-bottom: 1px solid rgba(128, 128, 128, 0.5); /* 투명도를 포함한 회색 선 */
+    margin-top: 10px; /* 선 위의 간격 조절 */
+    
 }
-th{
-	border: 1px groove #BDBDBD;
+th{ /* 1열 */
 	padding: 15px;
 	margin: auto;
 	background-color: #F6F6F6;
 	width: 200px;
+	text-align : left;
 }
-td{
+td{ /* 2열 */
 	text-align: left;
 	padding: 15px;
 	margin: auto;
 }
-
-table li, .txtInfo{
-	color: #A6A6A6;
+table li, .txtInfo{ /* 1열, 아이디/비번 부가설명 */
+	color: #5D5D5D;
 }
-table .required{
-	text-align : left;
+table .notrequired{ /* 추가정보 1열 */
+	text-align: left;
+	list-style: none;
 }
-table .inputTypeText{
+table .inputTypeText{ /* 2열 입력칸 */
 	border: 1px groove #BDBDBD;
 	width: 400px;
+	padding: 10px;
 }
-#mobile1, #mobile2, #mobile3{
+#mobile1, #mobile2, #mobile3{ /* 휴대전화 입력칸 */
 	border: 1px groove #BDBDBD;
 	width: 30%;
 	height: 40px;
 }
-table input{
-	width: auto;
-	padding: 10px;
-}
-.ec-address li{
+.ec-address li{ /* 주소칸 */
 	list-style: none;
 	margin-left: -30px;
+	margin-top: 5px;
 }
-#sample6_postcode, #sample6_address, #sample6_extraAddress{
+#sample6_postcode, #sample6_address, #sample6_extraAddress{ /* 주소 입력칸 */
 	background-color: #F6F6F6;
 	border: 1px solid #BDBDBD;
 }
-#postBtn{
+#postBtn{ /* 주소검색 버튼 */
 	width: 87px;
 	height: 43px;
 }
-#sample6_address{
+#sample6_address{ /* 기본주소 칸 */
 	width: 500px;
 }
-#sample6_detailAddress, #sample6_extraAddress{
+#sample6_detailAddress, #sample6_extraAddress{ /* 나머지주소, 참고항목 */
 	width: 248px;
 	display : inline;
 }
@@ -144,33 +148,30 @@ button {
 	margin-left: 10px;
 }
 .btn_white {
-	padding: 5px 10px;
+	padding: 20px 50px;
 	background-color: #FFFFFF;
 	color: #000000;
 	border: 1px groove #BDBDBD;
+	width: 400px;
+	text-decoration: none;
 }
 .btn_black {
-	padding: 5px 10px;
+	padding: 20px 50px;
 	background-color: #000000;
 	color: #ffffff;
 	border: 1px groove #BDBDBD;
+	text-decoration: none;
 }
-.desc{
+.desc{ /* (선택) */
 	font-size: 15px;
 	color: #BDBDBD;
 }
-#is_sex0, #is_sex1{
+#is_sex0, #is_sex1{ /* 성별 라디오 */
 	margin-left: 10px;
 }
-#birth_year, #birth_month, #birth_day{
-	width: 150px;
-}
-.gBottom{
-	margin-top: 50px;
-}
-#is_solar_calendar0, #is_solar_calendar1{
-	margin-top: 10px;
-	margin-left: 10px;
+.gBottom{ /* 하단 버튼 */
+	margin-top: 100px;
+	margin-bottom: 100px;
 }
 </style>
 
@@ -223,6 +224,79 @@ button {
             }
         }).open();
     }
+</script>
+
+<script type="text/javascript">
+	$(document).ready(function() {
+		$('#birth').datepicker({dateFormat:"yy/mm/dd"});
+	});
+	
+		function validCheck(){/* form validation check */
+  			var id = $('#id').val();  			
+  			
+  			if(id.length < 4 || id.length > 10){
+  				alert('아이디는 4자리 이상 10자리 이하로 입력해 주세요.');
+  				$('#id').focus();
+  				return false ; /* false이면 이벤트 전파 방지 */
+  			}
+  			
+  			var name = $('#name').val();  			
+  			if(name.length < 3 || name.length > 15){
+  				alert('이름은 3자리 이상 15자리 이하로 입력해 주세요.');  				
+  				$('#name').focus();
+  				return false ;
+  			}
+  			
+  			var password = $('#password').val();  			
+  			if(password.length < 5 || password.length > 12){
+  				alert('비밀 번호는 5자리 이상 12자리 이하로 입력해 주세요.');
+  				$('#password').focus();
+  				return false ;
+  			}    
+  			
+  			var regex = /^[a-z]\S{4,11}$/; /* 정규 표현식 */
+  			var result = regex.test(password) ;
+
+  			if(result == false){
+  				alert('비밀 번호의 첫글자는 반드시 소문자이어야 합니다.');  				
+  				return false ;
+  			}
+  			
+  			if(password.indexOf('@') <= 0 && password.indexOf('#') <= 0 && password.indexOf('$') <= 0){
+  				alert('특수 문자 @#% 중에 최소 1개가 포함이 되어야 합니다.');  				
+  				return false ;
+  			}
+  			
+			var genderList = $('input[name="gender"]:checked') ;
+  			if(genderList.length == 0){
+  				alert('성별은 반드시 선택이 되어야 합니다.');
+  				return false ; 
+  			}
+  			
+			var marriageList = $('input[name="marriage"]:checked') ;
+  			if(marriageList.length == 0){
+  				alert('결혼 여부는 반드시 선택이 되어야 합니다.');
+  				return false ; 
+  			}  			
+ 			
+  			/* jqueryUI 플러그인 date picker */
+  			var birth = $('#birth').val();
+  			var regex = /^\d{4}\/[01]\d{1}\/[0123]\d{1}$/ ;
+  			var result = regex.test(birth);
+  			
+  			if(result == false){
+  				alert('생일은 반드시 yyyy/mm/dd 형식으로 입력해 주세요.');  				
+  				return false ;
+  			}   
+  			
+			var hobbyList = $('input[name="hobby"]:checked') ;
+			
+			if(hobbyList.length < 2){ 
+				alert('취미는 최소 2개 이상 선택해 주셔야 합니다.');  				
+  				return false ;
+			}
+  		}
+	
 </script>
 </head>
 <body>
@@ -354,16 +428,8 @@ button {
 					<li class="notrequired birth">생년월일
 				</th>
                 <td class="formGroup date">
-                <input id="birth_year" name="birth_year" class="inputTypeText" maxlength="4" type="text"> 년
-                <input id="birth_month" name="birth_month" class="inputTypeText" maxlength="2" type="text"> 월
-                <input id="birth_day" name="birth_day" class="inputTypeText" maxlength="2" type="text"> 일<br>
-                <span class="gFlow ">
-                	<input id="is_solar_calendar0" name="is_solar_calendar" value="T" type="radio" checked="checked" autocomplete="off">
-                		<label for="is_solar_calendar0">양력</label>
-					<input id="is_solar_calendar1" name="is_solar_calendar" value="F" type="radio" autocomplete="off">
-						<label for="is_solar_calendar1">음력</label>
-				</span>
-				</td>
+	                <input type="text" class="inputTypeText" id="birth" name="birth">
+                </td>
             </tr>
 			</table>
 		</div>
