@@ -51,9 +51,8 @@ tr, input, select {
 }
 
 .distinct {
-	height: 10px;
-	border: 3px inset black;
-	background-color: gray;
+	height:2px;
+	border: 1px groove #BDBDBD;
 }
 
 .info {
@@ -127,7 +126,8 @@ button {
 	background-color: #000000;
 	color: #ffffff;
 }
-.paymentbar{
+
+.paymentbar {
 	text-align: center;
 }
 </style>
@@ -166,7 +166,7 @@ button {
 		<div class="col-7">
 			<nav class="navbar navbar-expand-sm bg-dark text-center">
 				<ul class="navbar-nav mx-auto">
-					<li class="nav-item"><a class="nav-link dark-nav">주문/결제</a></li>
+					<li class="nav-item"><p class="nav-link dark-nav">주문/결제</p></li>
 				</ul>
 			</nav>
 		</div>
@@ -300,7 +300,7 @@ button {
 						</td>
 					</tr>
 					<tr>
-						<td width="150px">상품 사진 <img
+						<td width="150px"><img
 							style="margin-left: 10px; margin-top: 10px; margin-bottom: 5px;"
 							width="120px" height="120px"
 							src="https://post-phinf.pstatic.net/MjAxOTA4MTNfMjIg/MDAxNTY1NjYwNDE4NjY3.l7xSqzLFBIojMAa8xxfY_OzKucZb4FimEDq2eS2WHkYg.tyeXLu39J6qYdxke7FTEnSdxuKWEf2jM5BRdk5Ronowg.GIF/1565623714.gif?type=w500_q75"></img>
@@ -325,6 +325,9 @@ button {
 					</tr>
 				</table>
 			</div>
+			<br>
+			<hr class="distinct">
+			<br>
 			<table class="col-12">
 				<colgroup>
 					<col style="width: 20%;">
@@ -381,7 +384,7 @@ button {
 								<li class="paymentbar"><a href="#tabs-3">신용 카드</a></li>
 							</ul>
 							<div id="tabs-1" style="width: 100%;">
-								<h2>무통장입금</h2>
+								<h3>무통장입금</h3>
 								<table class="col-12" style="">
 									<colgroup>
 										<col style="width: 20%;">
