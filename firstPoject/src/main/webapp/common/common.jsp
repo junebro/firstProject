@@ -32,6 +32,7 @@
 <meta charset="UTF-8">
 <style>
 
+	/* 버튼 */
 	button {
 		font-family: 'Noto Sans KR', sans-serif;
 		font-size: 1em;
@@ -52,13 +53,19 @@
 		color: #ffffff;
 	}
 	
+	/* 회색선 */
+	.underline {
+		border-bottom: 1px solid rgba(128, 128, 128, 0.5); /* 투명도를 포함한 회색 선 */
+		margin-top: 10px; /* 선 위의 간격 조절 */
+	}
+	
 	
 	/* select box */
 	.selectbox {
 		  display: inline-block;
 		  position: relative;
-		  width: 200px;
-		  border: 1px solid #999;
+		  width: 150px;
+		  border: 1px solid rgba(128, 128, 128, 0.3);
 		  z-index: 1;
 		  text-align: right;
 		}
@@ -80,7 +87,7 @@
 		  position: absolute;
 		  top: 1px;
 		  left: 5px;
-		  padding: .8em .5em;
+		  padding: .6em .5em;
 		  color: #999;
 		  z-index: -1;
 		}
@@ -90,7 +97,7 @@
 		  height: auto;
 		  line-height: normal;
 		  font-family: inherit;
-		  padding: .8em .5em;
+		  padding: .6em .5em;
 		  border: 0;
 		  opacity: 0;
 		  filter:alpha(opacity=0);
