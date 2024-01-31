@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@page import="java.util.List"%>
+<%@ include file="./../common/common.jsp"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -50,9 +51,9 @@ tr, input, select {
 	width: 100%;
 }
 
-.distinct {	/* 구분선 스타일 */
-	 border-bottom: 1px solid rgba(128, 128, 128, 0.5);
-        margin-top: 10px;
+.distinct { /* 구분선 스타일 */
+	border-bottom: 1px solid rgba(128, 128, 128, 0.5);
+	margin-top: 10px;
 }
 
 .info {
@@ -130,18 +131,88 @@ button {
 .paymentbar {
 	text-align: center;
 }
+
+.focusError {
+	border-color: red;
+	color: red;
+}
+
+.focusError {
+	border-color: red;
+	color: red;
+}
+
+.focusError::placeholder {
+	color: red;
+}
+
+.btn_black {
+	margin-botton:30px;
+	padding: 5px 10px;
+	background-color: #000000;
+	color: #ffffff;
+}
 </style>
 
 </head>
 <body>
-
+	<!-- 데이터 전송  -->
+	<script type="text/javascript">
+		$(document).ready(function() {
+			var newph = "값을 입력하세요."
+			// 결제 버튼을 클릭 시 값이 비어있을 경우 작동하는 함수
+			$('#buy').click(function() {
+				// 입금자 정보가 비어있을 시
+				if ($('#inputdp').val() == '') {
+					$('#inputdp').addClass('focusError');
+					document.getElementById('inputdp').focus();
+					$('#inputdp').attr('placeholder', newph);
+				}
+				// 비회원 주문자 번호가 비어있을 시
+				if ($('#inputpn2').val() == '') {
+					$('#inputpn2').addClass('focusError');
+					document.getElementById('inputpn2').focus();
+					$('#inputpn2').attr('placeholder', newph);
+				} else if ($('#inputpn2').val().length < 8) { // 비회원 주문자 번호가 8글자미만일시
+					alert('너무 짧잖');
+					$('#inputpn2').addClass('focusError');
+					document.getElementById('inputpn2').focus();
+					$('#inputpn2').attr('placeholder', newph);
+				}
+				// 상세주소가 비어있을 시
+				if ($('#address-2').val() == '') {
+					$('#address-2').addClass('focusError');
+					document.getElementById('address-2').focus();
+					$('#address-2').attr('placeholder', newph);
+				}
+				// 받는사람 정보가 비어있을 시
+				if ($('#inputrc').val() == '') {
+					$('#inputrc').addClass('focusError');
+					document.getElementById('inputrc').focus();
+					$('#inputrc').attr('placeholder', newph);
+				}
+				// 주문자 이메일이 비어있을 시
+				if ($('#inputemail').val() == '') {
+					$('#inputemail').addClass('focusError');
+					document.getElementById('inputemail').focus();
+					$('#inputemail').attr('placeholder', newph);
+				}
+				// 주문자 정보가 비어있을 시
+				if ($('#inputid').val() == '') {
+					$('#inputid').addClass('focusError');
+					document.getElementById('inputid').focus();
+					$('#inputid').attr('placeholder', newph);
+				}
+			});
+		});
+	</script>
 	<div style="background-color: white;"
 		class="justify-content-center row">
 		<div class="col-1">
 			<nav class="navbar navbar-expand-sm">
 				<ul class="navbar-nav">
-					<li class="nav-item"><a class="nav-link" href="./../Member/MyCart.jsp"><img
-							class="icon"
+					<li class="nav-item"><a class="nav-link"
+						href="./../Member/MyCart.jsp"><img class="icon"
 							src="https://cdn-icons-png.freepik.com/256/10009/10009107.png?ga=GA1.1.1582875918.1706248960&semt=ais">
 					</a></li>
 				</ul>
@@ -154,8 +225,8 @@ button {
 							class="icon"
 							src="https://cdn-icons-png.freepik.com/256/12718/12718662.png">
 					</a></li>
-					<li class="nav-item"><a class="nav-link" href="./../MyPage/MyPageM.jsp"> <img
-							class="icon"
+					<li class="nav-item"><a class="nav-link"
+						href="./../MyPage/MyPageM.jsp"> <img class="icon"
 							src="https://cdn-icons-png.freepik.com/256/747/747376.png?ga=GA1.1.1582875918.1706248960&semt=ais">
 					</a></li>
 				</ul>
@@ -170,9 +241,7 @@ button {
 				</ul>
 			</nav>
 		</div>
-
 	</div>
-
 	<div class="justify-content-center row">
 		<div class="container col-7">
 			<table class="col-12">
@@ -188,15 +257,15 @@ button {
 					</tr>
 					<tr style="height: 50px">
 						<td><span class="mar">주문자 </span></td>
-						<td><input placeholder="회원 정보를 통해 입력" size="15" value=""
-							type="text" style="width: 100%;"></td>
+						<td><input id="inputid" placeholder="회원 정보를 통해 입력" size="15"
+							value="" type="text" style="width: 100%;"></td>
 					</tr>
 					<tr>
 						<td><span class="mar">이메일</span></td>
 						<td>
 							<div class="input-group mt-3 mb-3 input-group-prepend">
-								<input style="width: 70%" type="text" class="form-control"
-									placeholder="회원 정보를 통해 입력"> <select
+								<input id="inputemail" style="width: 70%" type="text"
+									class="form-control" placeholder="회원 정보를 통해 입력"> <select
 									class="form-select select-toggle" id="messageC"
 									style="width: 30%; margin: auto;">
 									<option>--메일 선택--</option>
@@ -217,8 +286,8 @@ button {
 									<option>010</option>
 									<option>011</option>
 									<option>070</option>
-								</select> <input style="width: 70%" type="text" class="form-control"
-									placeholder="회원 정보를 통해 입력">
+								</select> <input id="inputpn" style="width: 70%" type="text"
+									class="form-control" placeholder="회원 정보를 통해 입력">
 							</div>
 						</td>
 					</tr>
@@ -238,8 +307,8 @@ button {
 					</tr>
 					<tr style="height: 50px">
 						<td><span class="mar">받는사람 </span></td>
-						<td><input placeholder="받는분 성함" size="15" value=""
-							type="text""></td>
+						<td><input id="inputrc" placeholder="받는분 성함" size="15"
+							value="" type="text""></td>
 					</tr>
 					<tr style="height: 50px">
 						<td><span class="mar">주소</span></td>
@@ -267,8 +336,8 @@ button {
 									<option>010</option>
 									<option>011</option>
 									<option>070</option>
-								</select> <input style="width: 70%" type="text" class="form-control"
-									placeholder="-없이 번호를 입력해주세요.">
+								</select> <input id="inputpn2" style="width: 70%" type="text"
+									class="form-control" placeholder="-없이 번호를 입력해주세요.">
 							</div>
 						</td>
 					</tr>
@@ -337,20 +406,20 @@ button {
 					<tr style="height: 50px">
 						<td><span class="mar">주문 상품</span></td>
 						<td><input name="rname" class="form-control"
-							placeholder="주문 상품 코드를 받아와서 입력될 예정" size="15" value=""
-							type="text" style="width: 100%; height: 50px;"></td>
+							disabled="disabled" placeholder="주문 상품 코드를 받아와서 입력될 예정" size="15"
+							value="" type="text" style="width: 100%; height: 50px;"></td>
 					</tr>
 					<tr style="height: 50px">
 						<td><span class="mar">배송비</span></td>
 						<td><input name="rname" class="inputTypeText"
-							placeholder="배송비 정보를 받아와서 입력될 예정" size="15" value="" type="text"
-							style="width: 100%; height: 50px;"></td>
+							disabled="disabled" placeholder="배송비 정보를 받아와서 입력될 예정" size="15"
+							value="" type="text" style="width: 100%; height: 50px;"></td>
 					</tr>
 					<tr style="height: 50px">
 						<td><span class="mar">할인/부가결제</span></td>
 						<td><input name="rname" class="inputTypeText"
-							placeholder="회원 정보에 따른 할인량을 계산하여 입력될 예정" size="15" value=""
-							type="text" style="width: 100%; height: 50px;"></td>
+							disabled="disabled" placeholder="회원 정보에 따른 할인량을 계산하여 입력될 예정"
+							size="15" value="" type="text" style="width: 100%; height: 50px;"></td>
 					</tr>
 					<tr style="height: 50px">
 						<td colspan="2">
@@ -405,9 +474,9 @@ button {
 										</tr>
 										<tr style="height: 50px">
 											<td><span class="mar">입금자명 </span></td>
-											<td><input name="rname" class="form-control"
-												placeholder="입금자 이름" size="15" value="" type="text"
-												style="width: 100%; height: 50px;"></td>
+											<td><input id="inputdp" name="rname"
+												class="form-control" placeholder="입금자 이름" size="15" value=""
+												type="text" style="width: 100%; height: 50px;"></td>
 										</tr>
 									</tbody>
 								</table>
@@ -430,16 +499,10 @@ button {
 					</tr>
 				</tbody>
 			</table>
-			<div class="justify-content-center row">
-				<div class="col-12">
-					<nav class="navbar navbar-expand-sm bg-dark text-center">
-						<ul class="navbar-nav mx-auto">
-							<li class="nav-item"><a class="nav-link dark-nav1" href="#">?원
-									결제하기</a></li>
-						</ul>
-					</nav>
+			<div class="justify-content-center row d-flex">
+				<div class="col-12" style="text-align: center;">
+					<button id="buy" type="button" class="btn_black" style="width:100%">?원 결제하기</button>
 				</div>
-
 			</div>
 			<div class="info">
 				<br>
@@ -450,11 +513,7 @@ button {
 				<p>- 최소 결제 가능 금액은 결제금액에서 배송비를 제외한 금액입니다.</p>
 				<br>
 			</div>
-
 		</div>
 	</div>
-
-
-
 </body>
 </html>

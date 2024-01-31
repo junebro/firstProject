@@ -224,13 +224,13 @@ a {
 							<th class="orderTh">가격</th>
 						</tr>
 						<tr class="underline">
-							<td class="orderTd">191919A</td>
+							<td class="orderTd" name="ORDCD">주문번호 ORDCD</td>
 							<td class="orderTd"><img class="orderImg "
 								src="https://www.wadiz.kr/ft/images/green001/2023/0613/20230613092632647_6.gif"></td>
-							<td class="orderTd" style="width: 40%;">진흙 뭍히고 물로 닦는 신발<br>쓰레기 신발<br>음</td>
-							<td class="orderTd">280</td>
-							<td class="orderTd">2</td>
-							<td class="orderTd">100원<br></td>
+							<td class="orderTd" style="width: 40%;">진흙 뭍히고 물<br>신발<br>음</td>
+							<td class="orderTd">옵션</td>
+							<td class="orderTd">QYT 수량</td>
+							<td class="orderTd">PRICE 가격<br></td>
 						</tr>
 						
 					</tbody>
